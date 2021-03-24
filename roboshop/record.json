@@ -1,0 +1,12 @@
+
+{
+  "Comment": "CREATE/DELETE/UPSERT a record ",
+  "Changes": [{
+    "Action": "UPSERT", // either creates a new record set with a specified value, or updates a record set with a specified value if that record set already exists
+    "ResourceRecordSet": {
+      "Name": "COMPONENT-test.devopssri.ml",  // give ur domain name
+      "Type": "A",
+      "TTL": 300,
+      "ResourceRecords": [{ "Value": IPADDRESS}]  //give private ip address
+    }}]
+}

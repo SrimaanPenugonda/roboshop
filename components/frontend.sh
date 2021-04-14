@@ -23,6 +23,7 @@ STAT $? "Artifacts Extract"
 
 INFO "Update Nginx Configuration"
 cp localhost.conf /etc/nginx/default.d/roboshop.conf
+sed -i -e "/catalogue/ s/catalogue:/localhost:/" /etc/nginx/default.d/roboshop.conf
 #sed -i  -e "/catalogue/ s/catalogue:/catalogue-test.devopssri.ml:/" \
 #        -e "/cart/ s/localhost/cart-test.devopssri.ml/" \
 #        -e "/user/ s/localhost/user-test.devopssri.ml/" \

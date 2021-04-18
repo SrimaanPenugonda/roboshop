@@ -36,7 +36,7 @@ STAT $? "Shipping Compile"
 
 chown roboshop:roboshop /home/roboshop/${COMPONENT} -R
 INFO "Configuring Shipping Startup Script "
-sed -i -e "s/CARTENDPOINT/cart-test.devopssri.ml/" -e "s/DBHOST/mysql-test.devopssri.ml/" /home/roboshop/${COMPONENT}/systemd.service
+sed -i -e "s/CARTENDPOINT/cart-dev.devopssri.ml/" -e "s/DBHOST/mysql-test.devopssri.ml/" /home/roboshop/${COMPONENT}/systemd.service
 STAT $? "CARTENDPOINT,DBHOST endpoint updated"
 
 INFO "Setup systemd service for shipping"

@@ -46,8 +46,8 @@ sed -i -e "/uid =/ c/uid ={USER_UID}" \
 STAT $? "userid,groupid updated"
 
 INFO "Update systemd.service file"
-sed -i  -e "s/CARTHOST/cart-test.devopssri.ml/" \
-        -e "s/USERHOST/user-test.devopssri.ml/" \
+sed -i  -e "s/CARTHOST/cart-dev.devopssri.ml/" \
+        -e "s/USERHOST/user-dev.devopssri.ml/" \
         -e "s/AMQPHOST/rabbitmq-test.devopssri.ml/" \
         /home/roboshop/${COMPONENT}/systemd.service
 STAT $? "cart,user,rabbitmq endpoints updated"

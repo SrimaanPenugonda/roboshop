@@ -1,4 +1,3 @@
-
 {
   "Comment": "CREATE/DELETE/UPSERT a record ",
   "Changes": [{
@@ -10,3 +9,4 @@
       "ResourceRecords": [{ "Value": IPADDRESS}]  //give private ip address
     }}]
 }
+

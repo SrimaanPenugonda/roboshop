@@ -42,6 +42,9 @@ case $? in
     STAT $? "Password Reset"
     ;;
 esac
+#mysql -u root --connect-expired-password -p${MYSQL_DEFAULT_PASSWORD} this will login to mysql
+#after login we r changing the pwd to password
+#for next run check whether able to login with password if yes leave it else do the reset
   INFO "Download MySQL Schema"
   DOWNLOAD_ARTIFACTS "https://dev.azure.com/DevOps-Batches/f635c088-1047-40e8-8c29-2e3b05a38010/_apis/git/repositories/2235ab8a-3229-47d9-8065-b56713ed7b28/items?path=%2F&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=master&resolveLfs=true&%24format=zip&api-version=5.0&download=true"
   STAT $? "Artifacts Download"

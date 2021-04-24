@@ -32,7 +32,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';" >/tmp/schema.sql
 MYSQL_DEFAULT_PASSWORD=$(grep 'A temporary password' /var/log/mysqld.log | awk '{print $NF}') #NF means gives the last column of record
 
 INFO "Reset MySQL Password"
-echo show databases | mysql -u root -ppassword &>>$Log_File
+echo "show databases;" | mysql -u root -ppassword &>>$Log_File
 case $? in
   0)
     STAT 0 "Password Reset"

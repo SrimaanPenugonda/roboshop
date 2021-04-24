@@ -12,7 +12,7 @@ case $? in
     STAT 0 "ErLang already installed"
     ;;
   1)
-    yum install https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64/esl-erlang_22.2.1-1~centos~7_amd64.rpm -y &>>$Log_File
+    yum install https://packages.erlang-solutions.com/erlang/rpm/centos/7/x86_64/esl-erlang_23.3.1-1~centos~7_amd64.rpm -y &>>$Log_File
     STAT $? "ErLang Installation"
     ;;
 esac

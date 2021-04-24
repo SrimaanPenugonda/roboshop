@@ -29,7 +29,7 @@ echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'P@5sw0rd123';
 uninstall plugin validate_password;
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';" >/tmp/schema.sql
 
-MYSQL_DEFAULT_PASSWORD=$(grep 'A temporary password' /var/log/mysqld.log | awk '{print $NF}') #NF means get the last column of record
+MYSQL_DEFAULT_PASSWORD=$(grep 'A temporary password' /var/log/mysqld.log | awk '{print $NF}') #NF means gives the last column of record
 
 INFO "Reset MySQL Password"
 echo show databases | mysql -u root -ppassword &>>$Log_File

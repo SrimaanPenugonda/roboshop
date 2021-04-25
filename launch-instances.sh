@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Managing roboshop project servers "
+echo "Managing roboshop project servers"
 
 case $1 in
       launch)

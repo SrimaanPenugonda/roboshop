@@ -5,7 +5,7 @@
 
 trigger:
   tags:
-    include: ["*"]
+    include: ["*"] #S35
 
 pool:
   vmImage: ubuntu-latest

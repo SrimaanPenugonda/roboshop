@@ -4,7 +4,8 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+ tags:
+   include: ["*"] #triggers only with all tags
 
 pool: Default
 

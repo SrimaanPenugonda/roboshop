@@ -1,0 +1,9 @@
+S36:
+Artifacts -
+    create feed with universal packages
+    install az cli on centos machine
+    https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=dnf
+        use yum instead dnf
+        sudo yum install libicu -y
+        az extension add --name azure-devops
+        TOKEN: given PAT token of ur organization - srimaanPAT

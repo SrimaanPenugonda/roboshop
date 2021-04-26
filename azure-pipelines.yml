@@ -14,7 +14,7 @@ steps:
 - task: UniversalPackages@0
   inputs:
     command: 'publish'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
+    publishDirectory: '$(Build.SourcesDirectory)'
     feedsToUsePublish: 'internal'
     vstsFeedPublish: '736b4ce8-9eaf-495c-9983-ed63d9930834'
     vstsFeedPackagePublish: 'frontend'

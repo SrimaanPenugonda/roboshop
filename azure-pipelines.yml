@@ -5,7 +5,7 @@
 
 trigger:
   tags:
-    include: ["*"] #trigger by all tags
+    include: ["*"] #trigger by all tags only
 
 pool: Default
 

@@ -7,8 +7,7 @@ trigger:
  tags:
   include: ["*"] # trigger only with tags now
    
-pool:
-  vmImage: 'ubuntu-latest'
+pool: Default
 
 steps:
 - task: UniversalPackages@0

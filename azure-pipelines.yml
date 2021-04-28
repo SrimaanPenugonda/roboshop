@@ -28,8 +28,8 @@ steps:
   displayName: Prepare Artifacts
 
 - task: UniversalPackages@0  
-  condition: contains(variables['Build.SourceBranch'],'tags')
-  inputs:   #publish frontend artifactory
+  condition: contains(variables['Build.SourceBranch'],'tags') #this condition helps to publish artifacts only when
+  inputs:   #publish frontend artifactory                     #tags , Build.SourceBranch
     command: 'publish'
     publishDirectory: '$(Build.SourcesDirectory)/publish'  # here download only publish directory
     feedsToUsePublish: 'internal'

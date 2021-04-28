@@ -5,21 +5,21 @@
 
 trigger:
  tags:
-   include: ["*"]
+   include: ["*"] # triggers with all tags
 
-pool: Default
+pool: Default  #self hosted pool
 
 steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: |
+    script: |        #selected components or files will copy to publish dir..
       mkdir publish
       cp -r components launch-instances.sh publish
-- task: UniversalPackages@0
+- task: UniversalPackages@0  #publish frontend artifactory
   inputs:
     command: 'publish'
-    publishDirectory: '$(Build.SourcesDirectory)/publish'
+    publishDirectory: '$(Build.SourcesDirectory)/publish'  # here download only publish directory
     feedsToUsePublish: 'internal'
     vstsFeedPublish: '736b4ce8-9eaf-495c-9983-ed63d9930834'
     vstsFeedPackagePublish: 'frontend'

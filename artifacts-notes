@@ -7,3 +7,11 @@ Artifacts -
         sudo yum install libicu -y
         az extension add --name azure-devops
         TOKEN: given PAT token of ur organization - srimaanPAT
+Create aa pipeline selecting the component
+    - azure-pipeline.yml file will create with default
+    -  change the pool to self hosted
+    - add a task selecting universal package and publish frontend artifactory
+    - frontend artifact will create and we can download the artifact from the download script der
+    -
+
+-

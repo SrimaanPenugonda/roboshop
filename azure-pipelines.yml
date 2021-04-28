@@ -4,8 +4,10 @@
 # https://aka.ms/yaml
 
 trigger:
+ branches:
+   include: ["*"] #triggers with all changes in branch
  tags:
-   include: ["*"] # triggers with all tags
+   include: ["*"] # triggers with all changes and tagged them
 
 pool: Default  #self hosted pool
 
@@ -14,12 +16,14 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'env'
+  displayName: Env Command
 - task: Bash@3
   inputs:  #selected components or files will copy to publish dir..
     targetType: 'inline'
     script: |        
       mkdir publish
       cp -r components launch-instances.sh publish
+  displayName: Prepare Artifacts
 - task: UniversalPackages@0  
   inputs:   #publish frontend artifactory
     command: 'publish'
@@ -28,3 +32,4 @@ steps:
     vstsFeedPublish: '736b4ce8-9eaf-495c-9983-ed63d9930834'
     vstsFeedPackagePublish: 'frontend'
     versionOption: 'patch'
+  displayName: Publish Artifacts

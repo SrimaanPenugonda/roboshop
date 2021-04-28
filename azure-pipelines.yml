@@ -28,6 +28,7 @@ steps:
   displayName: Prepare Artifacts
 
 - task: UniversalPackages@0  
+  condition: contains(variables['Build.SourceBranch'],'tags')
   inputs:   #publish frontend artifactory
     command: 'publish'
     publishDirectory: '$(Build.SourcesDirectory)/publish'  # here download only publish directory

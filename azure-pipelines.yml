@@ -17,7 +17,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'env'
-  displayName: Env Command
+  displayName: Env Command #this task helps to check the BUILD parameters
+
 - task: Bash@3
   inputs:  #selected components or files will copy to publish dir..
     targetType: 'inline'
@@ -25,6 +26,7 @@ steps:
       mkdir publish
       cp -r components launch-instances.sh publish
   displayName: Prepare Artifacts
+
 - task: UniversalPackages@0  
   inputs:   #publish frontend artifactory
     command: 'publish'

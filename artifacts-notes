@@ -14,4 +14,7 @@ Create aa pipeline selecting the component
     - frontend artifact will create and we can download the artifact from the download script der
     -
 
--
+-S37:
+Continuous Delivery and Continuous Deployment:
+Continuous Delivery - Deploy to production is manual.
+Continuous Deployment - Deployment is automatic
